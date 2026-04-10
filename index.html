@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio | Front-end Developer</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <!-- Fuente de Google -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navegacion -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Juan Angel</div>
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+            <div class="nav-extras">
+                <div class="social-header">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="X"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <div class="img-container">
+                <img src="/assets/images/img-perfil.jpeg" alt="Tu Nombre" class="img-perfil">
+            </div>
+            <h1>Hola, soy <span class="neon-text">Juan Angel</span></h1>
+            <p class="typing">Front-end Developer Junior</p>
+            <a href="#proyectos" class="btn-neon">Ver Proyectos</a>
+        </div>
+    </header>
+
+    <!-- Sobre Mi -->
+    <section id="sobre-mi" class="section">
+        <h2 class="title">Sobre <span class="neon-text">Mí</span></h2>
+        <div class="info-container">
+            <p>Villavicencio, <strong>Colombia</strong></p>
+            <p>15 años de Edad</p>
+            <p>Especializado exclusivamente en el desarrollo <strong>Front-end</strong>, creando interfaces interactivas
+                y modernas.</p>
+        </div>
+
+        <div class="skills">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Git/GitHub</span>
+            <span class="skill-tag">Responsive Design</span>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="section">
+        <h2 class="title">Mis <span class="neon-text">Proyectos</span></h2>
+        <div class="projects-grid">
+            <!-- Proyecto 1 -->
+            <div class="project-card">
+                <div class="project-img">IMG</div>
+                <div class="project-info">
+                    <h3>Proyecto Uno</h3>
+                    <p>Descripción breve del proyecto realizado con JS.</p>
+                    <a href="#" target="_blank">Ver Proyecto</a>
+                </div>
+            </div>
+            <!-- Proyecto 2 -->
+            <div class="project-card">
+                <div class="project-img">IMG</div>
+                <div class="project-info">
+                    <h3>Proyecto Dos</h3>
+                    <p>Interfaz moderna con animaciones CSS.</p>
+                    <a href="#" target="_blank">Ver Proyecto</a>
+                </div>
+            </div>
+            <!-- Proyecto 3 -->
+            <div class="project-card">
+                <div class="project-img">IMG</div>
+                <div class="project-info">
+                    <h3>Proyecto Tres</h3>
+                    <p>Landing page optimizada para móviles.</p>
+                    <a href="#" target="_blank">Ver Proyecto</a>
+                </div>
+            </div>
+            <!-- Proyecto 4 -->
+            <div class="project-card">
+                <div class="project-img">IMG</div>
+                <div class="project-info">
+                    <h3>Proyecto Cuatro</h3>
+                    <p>Aplicación de clima o consumo de API.</p>
+                    <a href="#" target="_blank">Ver Proyecto</a>
+                </div>
+            </div>
+            <!-- Proyecto 5 -->
+            <div class="project-card">
+                <div class="project-img">IMG</div>
+                <div class="project-info">
+                    <h3>Proyecto Cinco</h3>
+                    <p>E-commerce UI o Dashboard.</p>
+                    <a href="#" target="_blank">Ver Proyecto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="section">
+        <h2 class="title">Contacta <span class="neon-text">Conmigo</span></h2>
+
+        <div class="contact-container">
+            <!-- Formulario -->
+            <form class="contact-form">
+                <input type="text" placeholder="Tu Nombre" required>
+                <input type="email" placeholder="Tu Correo" required>
+                <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
+                <button type="submit" class="btn-neon">Enviar Mensaje</button>
+            </form>
+
+            <!-- Redes Sociales -->
+            <div class="social-media">
+                <h3>Sígueme en</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">X (Twitter)</a>
+                    <a href="#" class="social-icon">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2026 Creado por <span class="neon-text">Juan Angel</span></p>
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
