@@ -1,164 +1,223 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es" data-theme="brutal">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio | Front-end Developer</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <!-- Fuente de Google -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Juan Angel - Programador. Portafolio de desarrollo web para negocios locales.">
+  <title>Juan Angel - Programador | Portafolio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0a'/%3E%3Ctext x='50' y='70' font-size='58' font-family='Arial, sans-serif' font-weight='700' text-anchor='middle' fill='%23fafafa'%3EJA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-
 <body>
+  <svg class="brutal-asterisk" viewBox="0 0 200 200" aria-hidden="true">
+    <g transform="translate(100,100)">
+      <path d="M 0 -92 L 16 -24 L 76 -56 L 36 -8 L 92 0 L 36 8 L 76 56 L 16 24 L 0 92 L -16 24 L -76 56 L -36 8 L -92 0 L -36 -8 L -76 -56 L -16 -24 Z" fill="#000000" />
+    </g>
+  </svg>
 
-    <!-- Navegacion -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">Juan Angel</div>
+  <nav>
+    <div class="container">
+      <a href="#inicio" class="logo">Juan<span>Angel</span></a>
+      <ul class="nav-links" id="navMenu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar entre modo neobrutalista y minimalista" title="Cambiar entre modo neobrutalista y minimalista">Neobrutalista</button>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="nav-toggle-text">Menu</span>
+      </button>
+    </div>
+  </nav>
 
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-
-            <div class="nav-extras">
-                <div class="social-header">
-                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" title="X"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://github.com/juancho033" target="_blank" title="Github"><i class="fab fa-github"></i></a>
+  <header class="hero-header" id="inicio">
+    <div class="hero-dots"></div>
+    <div class="container">
+      <article class="hero-card">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <h1 class="hero-heading">Necesitas un Sitio web para tu Negocio?</h1>
+            <p class="hero-subheading">Te creo un sitio web personalizado</p>
+            <hr class="hero-divider">
+            <div class="hero-meta">
+              <span>Juan Angel</span>
+              <span>•</span>
+              <span>Programador</span>
+              <span>•</span>
+              <span>Desarrollo Web</span>
+            </div>
+            <div class="hero-actions">
+              <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+              <a href="#contacto" class="btn btn-secondary">Trabajemos juntos</a>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="overlay-card">
+              <header class="overlay-header">
+                <span class="overlay-title">Juan Angel - Programador</span>
+              </header>
+                <div class="hero-media">
+                  <img src="assets/images/perfil-avatar.png" alt="Foto de Juan Angel" class="hero-avatar" width="235" height="235" loading="eager" decoding="async" />
                 </div>
-                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+                <div class="hero-panel-body">
+                  <h2 class="hero-panel-title">Sitios web ligeros y rápidos</h2>
+                  <p class="hero-panel-text">Optimizados para móviles y PCs de bajos recursos. Enfoque en HTML, CSS y JavaScript puro.</p>
+                <div class="hero-chips">
+                  <span class="chip">HTML5</span>
+                  <span class="chip">CSS3</span>
+                  <span class="chip">JavaScript</span>
+                  <span class="chip">Responsive</span>
+                  <span class="chip">Accesible</span>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </nav>
+      </article>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <header id="inicio" class="hero">
-        <div class="hero-content">
-            <div class="img-container">
-                <img src="/assets/images/img-perfil.jpeg" alt="Tu Nombre" class="img-perfil">
-            </div>
-            <h1>Hola, soy <span class="neon-text">Juan Angel</span></h1>
-            <p class="typing">Front-end Developer Junior</p>
-            <a href="#proyectos" class="btn-neon">Ver Proyectos</a>
+  <main>
+    <section class="section" id="habilidades">
+      <header class="section-header">
+        <span class="section-eyebrow">Skills</span>
+        <h2 class="section-title">Habilidades</h2>
+        <p class="section-sub">Tecnologías con las que trabajo actualmente.</p>
+      </header>
+      <div class="skills-groups">
+        <div class="skills-group">
+          <h3 class="skills-group-title">Lenguajes</h3>
+          <ul class="skills-grid">
+            <li><a class="skill-pill" href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener" aria-label="HTML5, documentacion en MDN, se abre en una pestana nueva">HTML5</a></li>
+            <li><a class="skill-pill" href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank" rel="noopener" aria-label="CSS3, documentacion en MDN, se abre en una pestana nueva">CSS3</a></li>
+            <li><a class="skill-pill" href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank" rel="noopener" aria-label="JavaScript, documentacion en MDN, se abre en una pestana nueva">JavaScript</a></li>
+            <li><a class="skill-pill" href="https://www.typescriptlang.org/" target="_blank" rel="noopener" aria-label="TypeScript, sitio oficial, se abre en una pestana nueva">TypeScript</a></li>
+            <li><a class="skill-pill" href="https://www.python.org/" target="_blank" rel="noopener" aria-label="Python, sitio oficial, se abre en una pestana nueva">Python</a></li>
+            <li><a class="skill-pill" href="https://isocpp.org/" target="_blank" rel="noopener" aria-label="C++, sitio oficial de ISO C++, se abre en una pestana nueva">C++</a></li>
+          </ul>
         </div>
-    </header>
-
-    <!-- Sobre Mi -->
-    <section id="sobre-mi" class="section">
-        <h2 class="title">Sobre <span class="neon-text">Mí</span></h2>
-        <div class="info-container">
-            <p>Villavicencio, <strong>Colombia</strong></p>
-            <p>15 años de Edad</p>
-            <p>Especializado exclusivamente en el desarrollo <strong>Front-end</strong>, creando interfaces interactivas
-                y modernas.</p>
+        <div class="skills-group">
+          <h3 class="skills-group-title">Tecnologías y herramientas</h3>
+          <ul class="skills-grid">
+            <li><a class="skill-pill" href="https://getbootstrap.com/" target="_blank" rel="noopener" aria-label="Bootstrap 5, sitio oficial, se abre en una pestana nueva">Bootstrap 5</a></li>
+            <li><a class="skill-pill" href="https://git-scm.com/" target="_blank" rel="noopener" aria-label="Git, sitio oficial, se abre en una pestana nueva">Git</a></li>
+            <li><a class="skill-pill" href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub, sitio oficial, se abre en una pestana nueva">GitHub</a></li>
+          </ul>
         </div>
-
-        <div class="skills">
-            <span class="skill-tag">HTML5</span>
-            <span class="skill-tag">CSS3</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Git/GitHub</span>
-            <span class="skill-tag">Responsive Design</span>
-        </div>
+      </div>
     </section>
 
-    <!-- Proyectos -->
-    <section id="proyectos" class="section">
-        <h2 class="title">Mis <span class="neon-text">Proyectos</span></h2>
-        <div class="projects-grid">
-            <!-- Proyecto 1 -->
-            <div class="project-card">
-                <div class="project-img"><img src="assets/images/proyecto-1.png" alt="proyecto JuanLauncher" class="project-img"></div>
-                <div class="project-info">
-                    <h3>JuanLauncher</h3>
-                    <p>Sitio Web que cree con un amigo para probar y jugar juegos de PC y ANDROID.</p>
-                    <a href="https://juancho033.github.io/juanlauncher/index.html" target="_blank">Ver Proyecto</a>
-                </div>
+    <section class="section" id="proyectos">
+      <header class="section-header">
+        <span class="section-eyebrow">Portafolio</span>
+        <h2 class="section-title">Proyectos seleccionados</h2>
+        <p class="section-sub">Selección de trabajos desarrollados en HTML, CSS y JavaScript.</p>
+      </header>
+      <div class="projects-grid">
+        <a class="project-card project-card--featured" href="https://juancho033.github.io/juanlauncher/index.html" target="_blank" rel="noopener">
+          <div class="project-media project-media--light project-media--shot">
+            <img class="project-shot" src="assets/images/juanlauncher.png" alt="Captura de la interfaz de JuanLauncher, catálogo de juegos" width="1895" height="869" fetchpriority="high" decoding="async">
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name">JuanLauncher</h3>
             </div>
-            <!-- Proyecto 2 -->
-            <div class="project-card">
-                <div class="project-img">IMG</div>
-                <div class="project-info">
-                    <h3>Proyecto Dos</h3>
-                    <p>Interfaz moderna con animaciones CSS.</p>
-                    <a href="#" target="_blank">Ver Proyecto</a>
-                </div>
+            <hr class="project-divider">
+            <p class="project-desc">Catálogo para probar y jugar juegos de PC y Android, optimizado para carga rápida y navegación directa.</p>
+            <span class="project-link">Ver Proyecto</span>
+          </div>
+        </a>
+        <a class="project-card" href="#" data-project="WebComponents" target="_blank" rel="noopener">
+          <div class="project-media project-media--shot">
+            <img class="project-shot" src="assets/images/webcomponentes_screenshot.png" alt="Captura de la interfaz de WebComponents, biblioteca de componentes" width="1919" height="873" loading="lazy" decoding="async">
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name">WebComponents</h3>
             </div>
-            <!-- Proyecto 3 -->
-            <div class="project-card">
-                <div class="project-img">IMG</div>
-                <div class="project-info">
-                    <h3>Proyecto Tres</h3>
-                    <p>Landing page optimizada para móviles.</p>
-                    <a href="#" target="_blank">Ver Proyecto</a>
-                </div>
+            <hr class="project-divider">
+            <p class="project-desc">Biblioteca de componentes HTML, CSS y JS minimalista con sistema de filtros y vista previa.</p>
+            <span class="project-link">Ver Proyecto</span>
+          </div>
+        </a>
+        <a class="project-card" href="https://proyecto-javascript.pages.dev/" data-project="Lluvia de bloques - Proyecto JS" target="_blank" rel="noopener">
+          <div class="project-media project-media--light project-media--shot">
+            <img class="project-shot" src="assets/images/js_proyect_lluvia.png" alt="Captura del juego Lluvia de bloques" width="1910" height="879" loading="lazy" decoding="async">
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name">Lluvia de bloques - Proyecto JS</h3>
             </div>
-            <!-- Proyecto 4 -->
-            <div class="project-card">
-                <div class="project-img">IMG</div>
-                <div class="project-info">
-                    <h3>Proyecto Cuatro</h3>
-                    <p>Aplicación de clima o consumo de API.</p>
-                    <a href="#" target="_blank">Ver Proyecto</a>
-                </div>
+            <hr class="project-divider">
+            <p class="project-desc">Mini juego interactivo desarrollado en JavaScript puro.</p>
+            <span class="project-link">Ver Proyecto</span>
+          </div>
+        </a>
+        <a class="project-card" href="https://vino-web.pages.dev/" data-project="Vino_web" target="_blank" rel="noopener">
+          <div class="project-media project-media--shot">
+            <img class="project-shot" src="assets/images/vino_web_screenshot.png" alt="Captura del catálogo de vinos de Vino_web" width="1897" height="876" loading="lazy" decoding="async">
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name">Vino_web</h3>
             </div>
-            <!-- Proyecto 5 -->
-            <div class="project-card">
-                <div class="project-img">IMG</div>
-                <div class="project-info">
-                    <h3>Proyecto Cinco</h3>
-                    <p>E-commerce UI o Dashboard.</p>
-                    <a href="#" target="_blank">Ver Proyecto</a>
-                </div>
+            <hr class="project-divider">
+            <p class="project-desc">Sitio para catálogo de vinos con diseño limpio y navegación clara.</p>
+            <span class="project-link">Ver Proyecto</span>
+          </div>
+        </a>
+        <a class="project-card" href="https://juancho033.github.io/JuanTune_Web/" target="_blank" rel="noopener">
+          <div class="project-media project-media--light project-media--shot">
+            <img class="project-shot" src="assets/images/juantune_screenhot.png" alt="Captura de la landing de JuanTune Web" width="1896" height="878" loading="lazy" decoding="async">
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name">PAGINA DE JUANTUNE</h3>
             </div>
-        </div>
+            <hr class="project-divider">
+            <p class="project-desc">Landing con diseño visual marcado y secciones bien definidas.</p>
+            <span class="project-link">Ver Proyecto</span>
+          </div>
+        </a>
+        <a class="project-card" href="https://44f3fa51.proyecto-bootstrap.pages.dev/" data-project="Juanflix" target="_blank" rel="noopener">
+          <div class="project-media project-media--shot">
+            <img class="project-shot" src="assets/images/juanflix_screenshot.png" alt="Captura de la interfaz de Juanflix, web de reseñas de películas ficticias" width="1895" height="873" loading="lazy" decoding="async">
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name">Juanflix</h3>
+            </div>
+            <hr class="project-divider">
+            <p class="project-desc">Web de reseñas de películas ficticias, creada como examen de Bootstrap.</p>
+            <span class="project-link">Ver Proyecto</span>
+          </div>
+        </a>
+      </div>
     </section>
 
-    <!-- Sección de Contacto -->
-    <section id="contacto" class="section">
-        <h2 class="title">Contacta <span class="neon-text">Conmigo</span></h2>
-
-        <div class="contact-container">
-            <!-- Formulario -->
-            <form class="contact-form">
-                <input type="text" placeholder="Tu Nombre" required>
-                <input type="email" placeholder="Tu Correo" required>
-                <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
-                <button type="submit" class="btn-neon">Enviar Mensaje</button>
-            </form>
-
-            <!-- Redes Sociales -->
-            <div class="social-media">
-                <h3>Sígueme en</h3>
-                <div class="social-icons">
-                    <a href="#" class="social-icon">Facebook</a>
-                    <a href="#" class="social-icon">X (Twitter)</a>
-                    <a href="#" class="social-icon">YouTube</a>
-                </div>
-            </div>
-        </div>
+    <section class="cta" id="contacto">
+      <div class="cta-panel">
+        <h2 class="cta-title">¿Listo para tu sitio web?</h2>
+        <p class="cta-text">Te ayudo a llevar tu negocio al mundo digital con un sitio web a medida, rápido y enfocado en resultados.</p>
+        <a class="cta-btn" href="mailto:contacto@juanangel.dev">Trabajemos juntos</a>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <div class="footer-socials">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-        <p>&copy; 2026 Creado por <span class="neon-text">Juan Angel</span></p>
-    </footer>
+  <footer>
+    <div class="footer-card">
+      <div class="footer-row">
+        <span class="footer-text">mi Portafolio: www.juanangel_developer.pages.dev</span>
+        <span class="footer-text">© 2026 Juan Angel - Programador</span>
+      </div>
+    </div>
+  </footer>
 
-    <script src="/assets/js/script.js"></script>
+  <script src="assets/js/script.js" defer></script>
 </body>
-
 </html>
