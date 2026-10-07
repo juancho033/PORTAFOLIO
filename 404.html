@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es" data-theme="brutal">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>404 - Página no encontrada | Juan Angel</title>
+  <script>try { if (localStorage.getItem('theme-mode') === 'minimal') document.documentElement.setAttribute('data-theme', 'minimal'); } catch (e) {}</script>
+  <style>
+    :root {
+      --coral: #FF6B5B;
+      --light: #F0F0F0;
+      --black: #000000;
+      --dark: #1A1A1A;
+      --bg: var(--coral);
+      --card-bg: var(--light);
+      --text: var(--black);
+      --transition: 200ms cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    :root[data-theme="minimal"] {
+      --black: #0a0a0a;
+      --white: #fafafa;
+      --surface: #ffffff;
+      --muted: #5e5e5e;
+      --bg: var(--white);
+      --card-bg: var(--surface);
+      --text: var(--black);
+      --transition: 400ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { font-size: 62.5%; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.5;
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      text-align: center;
+      max-width: 56rem;
+      padding: clamp(3.2rem, 8vw, 6rem) clamp(2rem, 6vw, 4rem);
+      background: var(--card-bg);
+      border: 0.3rem solid var(--black);
+      border-radius: 1.5rem;
+      box-shadow: 1.2rem 1.2rem 0 0 var(--black);
+    }
+
+    :root[data-theme="minimal"] .wrap {
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 20px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 20px 60px rgba(0, 0, 0, 0.1);
+    }
+
+    .code {
+      font-size: clamp(7rem, 22vw, 12rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      margin-top: 2rem;
+    }
+
+    :root[data-theme="minimal"] h1 {
+      text-transform: none;
+      letter-spacing: -1px;
+      font-weight: 700;
+    }
+
+    .lead {
+      margin-top: 1.4rem;
+      font-size: clamp(1.4rem, 2vw, 1.7rem);
+      opacity: 0.8;
+    }
+
+    :root[data-theme="minimal"] .lead { color: var(--muted); }
+
+    .home {
+      margin-top: 3.2rem;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1rem 2.8rem;
+      border: 0.3rem solid var(--black);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--black);
+      font: inherit;
+      font-size: 1.3rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.25rem;
+      text-decoration: none;
+      box-shadow: 0.6rem 0.6rem 0 0 rgba(0, 0, 0, 0.55);
+      transition: transform var(--transition), background-color var(--transition), color var(--transition);
+    }
+
+    .home:hover {
+      background: var(--black);
+      color: var(--card-bg);
+      transform: translateY(-2px);
+    }
+
+    .home:focus-visible { outline: 2px solid var(--black); outline-offset: 2px; }
+
+    :root[data-theme="minimal"] .home {
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: var(--surface);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      border-radius: 100px;
+      text-transform: none;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+      font-size: 1.4rem;
+      padding: 1rem 2.2rem;
+    }
+
+    :root[data-theme="minimal"] .home:hover { background: rgba(0, 0, 0, 0.05); color: var(--black); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="code" aria-hidden="true">404</p>
+    <h1>Esta página no existe</h1>
+    <p class="lead">La dirección no lleva a ningún sitio, o el enlace cambió.</p>
+    <a class="home" href="/">Volver al inicio</a>
+  </main>
+</body>
+</html>

@@ -115,3 +115,42 @@ navLinks.forEach(link => {
 });
 
 syncActiveLink();
+
+const contactController = new AbortController();
+const copyButtons = document.querySelectorAll('[data-copy]');
+const contactStatus = document.getElementById('contactStatus');
+
+copyButtons.forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const value = btn.dataset.copy;
+    let ok = false;
+    try {
+      await navigator.clipboard.writeText(value);
+      ok = true;
+    } catch {
+      const ta = document.createElement('textarea');
+      ta.value = value;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      try {
+        ta.select();
+        ok = document.execCommand('copy');
+      } catch {
+        ok = false;
+      } finally {
+        document.body.removeChild(ta);
+      }
+    }
+    btn.classList.toggle('is-copied', ok);
+    if (contactStatus) {
+      contactStatus.textContent = ok
+        ? value + ' copiado al portapapeles.'
+        : 'No se pudo copiar. El ID es ' + value;
+    }
+    if (ok) {
+      setTimeout(() => btn.classList.remove('is-copied'), 1600);
+    }
+  }, { signal: contactController.signal });
+});
