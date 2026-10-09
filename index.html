@@ -11,6 +11,8 @@
   <meta name="google-site-verification" content="iRKTh7GeIwBGpWHHBlETJj9NaLP914tXEE1ppfHmn1Q" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/theme-brutal.css">
+  <link rel="stylesheet" href="assets/css/theme-minimal.css">
 </head>
 <body>
   <svg class="brutal-asterisk" viewBox="0 0 200 200" aria-hidden="true">
@@ -19,19 +21,23 @@
     </g>
   </svg>
 
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
   <nav>
     <div class="container">
       <a href="#inicio" class="logo">Juan<span>Angel</span></a>
-      <ul class="nav-links" id="navMenu">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar entre modo neobrutalista y minimalista" title="Cambiar entre modo neobrutalista y minimalista">Neobrutalista</button>
+      <div class="nav-panel" id="navPanel">
+        <ul class="nav-links" id="navMenu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar entre modo neobrutalista y minimalista" title="Cambiar entre modo neobrutalista y minimalista">Neobrutalista</button>
+      </div>
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
         <span class="nav-toggle-bars" aria-hidden="true"></span>
-        <span class="nav-toggle-text">Menu</span>
+        <span class="nav-toggle-text">Menú</span>
       </button>
     </div>
   </nav>

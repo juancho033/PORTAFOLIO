@@ -1,0 +1,70 @@
+/* theme-minimal.css
+   Ajustes responsive del modo minimalista (movil y tablet).
+   Se carga despues de styles.css: a igual especificidad, estas reglas ganan.
+   Breakpoint de movil unificado con el nav: max-width 860px. */
+
+@media (max-width: 860px) {
+  /* 1. dvh evita el salto de la barra de direcciones movil.
+        padding-top alineado al nav compacto (12px + ~62px). */
+  [data-theme="minimal"] .hero-header {
+    padding: 104px 0 56px;
+    min-height: 100vh;
+    min-height: 100dvh;
+    justify-content: flex-start;
+  }
+
+  [data-theme="minimal"] .hero-grid {
+    gap: 28px;
+  }
+
+  [data-theme="minimal"] .hero-card {
+    padding: clamp(22px, 5vw, 40px);
+  }
+
+  /* 2. Ritmo vertical mas compacto en pantallas medianas y chicas. */
+  [data-theme="minimal"] main {
+    padding-bottom: 4rem;
+    gap: 4rem;
+  }
+
+  [data-theme="minimal"] .container {
+    padding: 0 20px;
+  }
+
+  [data-theme="minimal"] .section {
+    padding: 0 20px;
+  }
+
+  [data-theme="minimal"] .section-header {
+    margin-bottom: 40px;
+    gap: 12px;
+  }
+
+  [data-theme="minimal"] .cta {
+    padding: 64px 20px 40px;
+  }
+
+  [data-theme="minimal"] footer {
+    padding: 0 0 40px;
+  }
+
+  [data-theme="minimal"] .footer-card {
+    padding: 40px 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  /* 3. Titular del hero mas contenido para evitar cortes feos a 320px. */
+  [data-theme="minimal"] .hero-heading {
+    font-size: clamp(28px, 9vw, 34px);
+    letter-spacing: -0.8px;
+  }
+
+  [data-theme="minimal"] .overlay-card {
+    padding: 18px;
+  }
+
+  [data-theme="minimal"] .project-body {
+    padding: 20px;
+  }
+}

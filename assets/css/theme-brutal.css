@@ -1,0 +1,71 @@
+/* El asterisco decorativo desbordaba 281px en todos los anchos medidos.
+   <=1024px se contiene en horizontal y deja de rotar (la rotacion inflaba
+   el bounding box por encima del viewport). */
+@media (max-width: 1024px) {
+  .brutal-asterisk {
+    width: 22rem;
+    height: 22rem;
+    top: -9rem;
+    right: 0;
+    opacity: 0.22;
+    animation: none;
+  }
+}
+
+/* En movil/tablet las sombras solidas de 12-18px pesaban y quedaban
+   recortadas por overflow-x:hidden. */
+@media (max-width: 860px) {
+  :root[data-theme="brutal"] {
+    --shadow: 0.45rem 0.45rem 0 0 var(--black);
+    --shadow-sm: 0.3rem 0.3rem 0 0 var(--black);
+    --shadow-lg: 0.6rem 0.6rem 0 0 var(--black);
+  }
+
+  /* El nav movil es una pildora fixed: top 12 + 66 de alto termina en y=78.
+     El hero-header arrancaba en 16px, asi que el heading (card.top + padding
+     del card) quedaba 100% tapado. 9.2rem deja ~14px de aire bajo la pildora
+     sin perder la estetica de collision. */
+  [data-theme="brutal"] .hero-header {
+    padding-top: 9.2rem;
+  }
+
+  .brutal-asterisk {
+    width: 14rem;
+    height: 14rem;
+    top: -5rem;
+    opacity: 0.16;
+  }
+
+  .hero-avatar {
+    box-shadow: 0.5rem 0.5rem 0 0 var(--black);
+  }
+
+  .cta-btn {
+    box-shadow: 0.5rem 0.5rem 0 0 rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* <=600px los dos CTA no caben en fila: se apilan a ancho completo y se
+   comprime tipografia/letter-spacing para que "TRABAJEMOS JUNTOS" entre en
+   una sola linea (alto 44) incluso a 320px. En >=640 vuelven a fila. */
+@media (max-width: 600px) {
+  [data-theme="brutal"] .hero-actions {
+    flex-direction: column;
+  }
+
+  [data-theme="brutal"] .hero-actions .btn {
+    width: 100%;
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+  }
+}
+
+/* <=720px el overlay-card pasa a full-width (align-self: stretch) y su
+   margin-top negativo (-40px) lo encabalga sobre el CTA secundario; se
+   anula para que los botones queden libres. En desktop vive en su columna
+   y el efecto de "collision" se conserva. */
+@media (max-width: 720px) {
+  [data-theme="brutal"] .overlay-card {
+    margin-top: 0;
+  }
+}

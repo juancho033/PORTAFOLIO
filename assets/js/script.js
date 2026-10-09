@@ -2,6 +2,8 @@ const root = document.documentElement;
 const toggle = document.getElementById('themeToggle');
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
+const navPanel = document.getElementById('navPanel');
+const navBackdrop = document.getElementById('navBackdrop');
 const navLinks = document.querySelectorAll('.nav-links a');
 const saved = localStorage.getItem('theme-mode');
 if (saved === 'minimal') {
@@ -26,7 +28,9 @@ toggle.addEventListener('click', () => {
 
 const setMenu = (open) => {
   navToggle.setAttribute('aria-expanded', String(open));
-  navMenu.classList.toggle('is-open', open);
+  navPanel.classList.toggle('is-open', open);
+  navBackdrop.classList.toggle('is-open', open);
+  document.body.classList.toggle('menu-open', open);
 };
 
 const menuController = new AbortController();
@@ -52,7 +56,7 @@ document.addEventListener('click', (e) => {
   if (!e.target.closest('nav')) setMenu(false);
 }, { signal: menuSignal });
 
-const mobileQuery = window.matchMedia('(max-width: 720px)');
+const mobileQuery = window.matchMedia('(max-width: 860px)');
 mobileQuery.addEventListener('change', () => setMenu(false), { signal: menuSignal });
 
 const sections = [...navLinks]
